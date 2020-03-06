@@ -16,11 +16,6 @@ namespace Opg4_TaliaRESTService
             Sidetal = sidetal;
             Isbn = isbn;
         }
-        /* Har fjernet muligheden for at undlade titler, men ellers kopieret min bog class fra opgave 1.
-         I forbindelse med unit test, gav det mening også at teste værdier, som måtte være null. Men jeg 
-         kan ikke umiddelbart få null værdien til at virke i forbindelse med CRUD metoderne, så undlader 
-         det i forbindelse med denne opgave.*/
-       
         public Bog() { }
 
         public string Titel

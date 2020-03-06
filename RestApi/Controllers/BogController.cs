@@ -29,7 +29,6 @@ namespace RestApi.Controllers
             return bøger;
         }
 
-        // GET: api/bog/5
         [HttpGet]
         [Route("isbn/{substring}")]
         public Bog GetBog(string substring)
@@ -47,19 +46,16 @@ namespace RestApi.Controllers
         [HttpGet]
         [Route("titel/{substring}")]
         public IEnumerable<Bog> GetTitel(string substring)
-        {       
+        {
             return bøger.FindAll(i => i.Titel.Contains(substring));
         }
 
-
-        // POST: api/bøger
         [HttpPost]
         public void Post([FromBody] Bog value)
         {
             bøger.Add(value);
         }
 
-        // PUT: api/bøger/5
         [HttpPut]
         [Route("{isbn}")]
         public void Put(string isbn, [FromBody] Bog value)
@@ -74,7 +70,6 @@ namespace RestApi.Controllers
             }
         }
 
-        // DELETE: api/ApiWithActions/5
         [HttpDelete]
         [Route("{isbn}")]
         public void Delete(string isbn)
